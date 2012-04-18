@@ -1,0 +1,8 @@
+# github defaults
+safe: true
+pygments: true
+lsi: false
+
+# template data
+title: CoderDojo Malmö
+asset_path: /assets

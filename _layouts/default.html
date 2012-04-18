@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=UTF-8>
+        <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+        <link href={{site.asset_path}}/bootstrap/css/bootstrap.min.css rel=stylesheet>
+    </head>
+    <body>
+        <div class=container>
+        {{content}}
+        </div> <!-- .container -->
+
+        <script src={{site.asset_path}}/jquery.min.js></script>
+        <script src={{site.asset_path}}/bootstrap/js/bootstrap.min.js></script>
+    </body>
+</html>
