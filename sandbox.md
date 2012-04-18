@@ -1,8 +1,9 @@
 ---
 title: Sandbox
+layout: page
 ---
 
-# Header
+## Header
 
 * one
 * two
