@@ -3,14 +3,11 @@ title: Webb med Batman
 layout: page
 ---
 
-## Steg 0: Skaffa Hackasaurus 
+## Steg 0: Skaffa Hackasaurus
 
-[Skaffa Hackasaurus](http://hackasaurus.org/en-US/goggles/) till din webbläsare! 
-
-Eller använd den inbyggda Web Inspector!
-
-Testa att ta en skärmbild!
-
+* [Skaffa Hackasaurus](http://hackasaurus.org/en-US/goggles/) till din webbläsare!
+* Eller använd den inbyggda Web Inspector!
+* Testa att ta en skärmbild!
 
 ## Steg 1: Vita Husets hemsida varnar för superskurk!
 
@@ -30,5 +27,3 @@ Testa att ta en skärmbild!
 * Hur ser det ut i tidningen nästa dag?
 * Ändra en bild till Batman, och sätt en bra rubrik.
 * Ta en skärmbild!
-
-
