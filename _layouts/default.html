@@ -4,8 +4,10 @@
         <meta charset=UTF-8>
         <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
         <link href={{site.asset_path}}/bootstrap/css/bootstrap.min.css rel=stylesheet>
+        <link href={{site.asset_path}}/style.css rel=stylesheet>
     </head>
     <body>
+        {% include navbar.html %}
         <div class=container>
         {{content}}
         </div> <!-- .container -->
