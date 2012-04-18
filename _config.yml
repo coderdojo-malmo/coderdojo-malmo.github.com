@@ -3,6 +3,9 @@ safe: true
 pygments: true
 lsi: false
 
+# other settings
+exclude: ['README.md']
+
 # template data
 title: CoderDojo Malmö
 asset_path: /assets
