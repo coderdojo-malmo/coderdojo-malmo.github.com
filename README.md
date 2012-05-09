@@ -7,3 +7,7 @@ The web site uses [Twitter Bootstrap](http://twitter.github.com/bootstrap/). The
 `@baseFontSize`: 18px
 
 `@baseLineHeight`: 24px
+
+**Run it locally**
+
+    jekyll --server
