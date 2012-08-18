@@ -10,4 +10,4 @@ The web site uses [Twitter Bootstrap](http://twitter.github.com/bootstrap/). The
 
 **Run it locally**
 
-    jekyll --server
+    jekyll --server --auto
