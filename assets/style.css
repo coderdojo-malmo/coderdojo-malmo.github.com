@@ -1,8 +1,10 @@
 body {
     padding-top: 60px;
+    padding-bottom: 100px;
 }
 
 #mentors .span3 {
     text-align: center;
     font-weight: bold;
+    padding: 20px;
 }
