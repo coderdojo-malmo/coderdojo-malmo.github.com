@@ -4,64 +4,64 @@ layout: page
 ---
 # CoderDojo: Minecraft Moddning
 
-### Nivå 0: CoderDojo – installera Eclipse och dekompilera minecraft
+### Nivå 0: CoderDojo – installera Eclipse och dekompilera Minecraft
 
-Att börja moddna minecraft måste du först ha en ren minecraft (en minecraft utan andra modder).
+För att börja modda Minecraft behöver du ha en ren Minecraft (en Minecraft utan andra moddar).
 
-Då installera du kanske:
+Du måste ha de här programmen installerade:
 
-* jdk (java developer kit)
-* ire (java runtime environment)
-* eclipse (en app att programmera i java)
-* mcp (mine craft coder pack)
+* JDK (Java Developer Kit)
+* JRE (Java Runtime Environment) -- du har säkert redan JRE eftersom det behövs för Minecraft
+* Eclipse (en app att programmera i Java)
+* MCP (Minecraft Coder Pack)
 
-Detta kan du hitta på internet, usb stickan eller PirateBoxen.
+Du kan du hitta dem på internet, usb stickan eller PirateBoxen.
 
-Efter du har anstellerat allt, kan du dekompilera koden.
+Efter att ha installerat allt, kan du dekompilera koden.
 
 **Windows**
 
-1. tryck på kör i meny
-2. söka till %appdata%
-3. kopiera mappar  minecraft/bin och minecraft/resources till mappen mcp726a/jars
-4. dubbel tryck på mcp726a/decompile.sh
+1. tryck på Kör i Start-menyn
+2. skriv `%appdata%` och tryck på Kör
+3. kopiera mapparna `minecraft\bin` och `minecraft\resources` till mappen `mcp726a\jars`
+4. dubbelklicka på `mcp726a\decompile.bat`
 
 **Mac**
 
-1. navigera till ~/Library/Application Support/minecraft
-2. kopiera mappar bin och resources till mappen: mcp726a/jars
-3. kör terminal.app
-4. cd i till mcp726a
-5. kör bash decompile.sh
+1. gå till `~/Library/Application Support/minecraft`
+2. kopiera mapparna `bin` och `resources` till mappen: `mcp726a/jars`
+3. kör `Terminal.app`
+4. `cd` till `mcp726a`
+5. kör `bash decompile.sh`
 
-Om du har  problemmer och måste installera något annat då måste du kör mcp726a/cleanup.bat innan du kan försöka dekompilera igen.
+Om du har problem och behöver installera något annat måste du rensa upp (Windows: `mcp726a\cleanup.bat`, Mac: `mcp726a/cleanup.sh`) innan du kan dekompilera igen.
 
-### Nivå 1: Slime – skapa en ny block med den egna recept
+### Nivå 1: Slime – skapa ett nytt block med ett eget recept
 
-När du kör Eclipse första gången måste du indentifera i vilken verkplats ditt projekt ligger. Navigera till mcp723/eclipse och tryck på OK.
+När du kör Eclipse för första gången måste du peka ut var ditt projekt ligger. Gå till `mcp723/eclipse` och tryck på OK.
 
-Minecraft källkoden ligger under Client/src/net.minecraft.src. Hitta det på vänster sid av Eclipse i Package Explorer fönstret. Här finns nästan alla filer minecraft kör ifrån. Oppna Block.java.
+Minecraft källkoden ligger under `Client/src/net.minecraft.src`. Hitta den på vänster sida av Eclipse i Package Explorer fönstret. Här finns nästan all kod som gör att Minecraft är just Minecraft. Öppna `Block.java`.
 
-Block.java är en objektklass. Det är föräldern till alla andra blocker som minecraft har.
+`Block.java` är en klass. Det är föräldern till alla andra block som finns i Minecraft.
 
-Hitta linjen:
+Hitta raden:
 
 	    public static final Block stone = (new BlockStone(1, 1)).setHardness(1.5F).setResistance(10.0F).setStepSound(soundStoneFootstep).setBlockName("stone");
 
 Det är en deklaration av en typ av block: en sten. Varje block har ditt eget nummer. Sten har numret 1. Vilken block har numret 86?
 
-Eftersom Mojang fortfarande utvecklar Minecraft kan du se att nya blocker har högra nummer än gamla. När du skapa ditt eget block måste du välja ett nummer ingen annan block använda.
+Eftersom Mojang fortfarande utvecklar Minecraft kan du se att nya block har högre nummer än gamla. När du skapar ditt egna block måste du välja ett nummer inget annat block använder.
 
-**Din först block**
+**Ditt första block**
 
-Skapa en ny klass. Jag kaller min BlockExampel att följer konventionen men du kan kalla det vad som helst. Kopiera koden i till ny klass.
+Skapa en ny klass. Jag kallar min `BlockExample`, men du kan kalla den vad som helst. Kopiera koden i till ny fil.
 
 	package net.minecraft.src;
 	import java.util.Random;
 
-	/* Koden användar namnet BlockExampel. Byta det till namnet som du har valt. */
+	/* Koden användar namnet BlockExample. Ändra till ditt ett namn du har valt. */
 
-	public class BlockExampel extends Block
+	public class BlockExample extends Block
 	{
 		public BlockExample(int i, int j)
 		{
@@ -74,59 +74,61 @@ Skapa en ny klass. Jag kaller min BlockExampel att följer konventionen men du k
 		}
 	}
 
-Kanske sog du att en linje är inte kod utan på svenska. När man programmera det är en bra idé att kommentera vad du skriver. Då om en annan person (eller en äldre du) läsa koden kan de bättre förstå vad du menade. Kommenter på java, börja med /* och sluta med */. Om du göra inte det din kod kommer att inte fungera.
+Kanske såg du att en rad inte är kod utan en vanlig mening. När du programmerar är det en bra idé att kommentera vad du skriver. Om du gör det kan en annan person (eller en äldre dig) läsa koden och förstå bättre vad du menade. Kommentarer i java börjar med `/*` och slutar med `*/`. Om du glömmer starten och/eller slutet på kommentaren kommer inte din kod att fungera.
 
-I filen block.java måste du nu deklara din egen block.
+I filen `Block.java` måste du nu deklarera ditt nya block.
 
-Under sista deklaration tillägger linjen:
+Lägg till den här raden under den sista deklarationen:
 
-	public static final Block exampel = (new BlockExample(92, 1)).setHardness(1.5F).setResistance(10F).setStepSound(soundStoneFootstep);
+	public static final Block example = (new BlockExample(92, 1)).setHardness(1.5F).setResistance(10F).setStepSound(soundStoneFootstep);
 
-Byta namnet 'exampel' och numret '92'. Kommentera vad du har gjört.
+Byt namnet `example` och numret `92`. Kommentera vad du har gjort.
 
-Nu är vi klar att kör Minecraft. Spara allt och tryck på 'Run'.
+Nu är vi redo att köra Minecraft med din mod. Spara allt och klicka på 'Run'.
 
-Börja en ny kreativ värld med bedrageren aktiverat.
+Börja en ny Creative värld med Cheat mode aktiverat.
 
-Kör kommand:
+Kör kommandot:
 
-/give Player 92 64
+    /give Player 92 64
 
-Istället än 'Player' använda ditt spelarenamn (skriv 'P' och tryck tab) och istället än 92 använda block numret.
+Istället för `Player` använd ditt spelarnamn (skriv `P` och tryck tab) och istället för `92` använd blocknumret.
 
-Om alla fungera bra ha du din ny block.
+Om allt fungera bra har du nu ditt nya block.
 
-Försöka att göra din block hårdare. Försöka att göra din block unbreakable (tip: vilken block är redo unbreakable).
+Försök att göra ditt block hårdare. Försök att göra ditt block oförstörbart (tips: vilket block är redan oförstörbart?).
 
-**Block recepten**
+**Blockrecept**
 
-Nu kan vi börja ge ditt block en recept.
+Nu kan vi börja ge ditt block ett recept.
 
-Öppna filen CraftingManager.java i Eclipse.
+Öppna filen `CraftingManager.java` i Eclipse.
 
-Navigera till linjen:
+Gå till raden:
 
 	this.addRecipe(new ItemStack(Item.sign, 3), new Object[] {"###", "###", " X ", '#', Block.planks, 'X', Item.stick});
 
-Här finns där alla informationer vi behöver att skapa en skylt i Minecraft. Tänker nu hur man göra det i en crafting box.
+Här finns all information vi behöver för att skapa en skylt i Minecraft. Fundera på hur man gör det i gör det i Crafting lådan i Minecraft.
 
-I först ruta behöver man tre plankar. I andra är det samma. Men i sista behöver man bara en pinne i mellan plats. Titta på koden och tänker på hur det fungera (tip: # betyder plank och X stick).
+I första raden behöver man tre plankor. I andra behöver man också tre plankor. I den tredje behöver man bara en pinne med tomrum på båda sidorna. Titta på koden och fundera på hur det fungerar (tips: `#` betyder planka och `X` pinne)
 
-Observera att skylt och pinne är inte en block utan en item. Det är en viktig skillnad. Vad andra kunde vara en item i Minecraft?
+![minecraft-sign-recipe.png](minecraft-sign-recipe.png)
 
-Under sista recepten tillägger linjen:
+Observera att skylt och pinne inte är `Block` utan `Item`. Det är en viktig skillnad. Vad mer kan vara `Item` i Minecraft?
 
-	addRecipe(new ItemStack(Block.exampel, 1), new Object[] {"# #", " # ", "# #", '#', Block.dirt});
+Lägg till den här raden under sista receptet:
 
-Byta namnet 'exampel. Kommentera vad du har gjört.
+	addRecipe(new ItemStack(Block.example, 1), new Object[] {"# #", " # ", "# #", '#', Block.dirt});
 
-Vad är recepten här. Skriva den på en lapp.
+Ändra namnet `example`. Kommentera vad du har gjort.
 
-Spara koden och kör Minecraft. Se om du kan spara din block utan kommander.
+Vad är receptet här? Skriv det på en lapp.
 
-Byta recepten till någonting med två blocker. Försöka en recept med itemer.
+Spara koden och kör Minecraft. Se om du kan crafta fram ditt block utan att fuska.
 
-### Nivå 2: Blaze – skapa en ny vapen med den egen textur
-### Nivå 3: Creeper – skapa en kustom npc med den egen ljud
-### Nivå 4: Steve – hjälp en annan person till nivå creeper
-### Nivå 5: Ender Dragon – gör din eget mod och låda det upp till minecraft forumer
+Ändra receptet till något med två block. Gör ett recept med item.
+
+### Nivå 2: Blaze – skapa ett nytt vapen med en egen textur
+### Nivå 3: Creeper – skapa en egen NPC med ett eget ljud
+### Nivå 4: Steve – hjälp en annan person till Creeper nivån
+### Nivå 5: Ender Dragon – gör din eget mod och ladda upp det till ett Minecraft forum
