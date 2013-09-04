@@ -11,3 +11,14 @@ The web site uses [Twitter Bootstrap](http://twitter.github.com/bootstrap/). The
 **Run it locally**
 
     jekyll --server --auto
+
+or perhaps
+
+    jekyll serve --watch
+
+if you have newer Jekyll.
+
+**Requirements**
+
+    a version of Ruby
+    gem install jekyll
