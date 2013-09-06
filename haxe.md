@@ -20,5 +20,7 @@ När vi hittar bra Haxe-resurser för det så kommer vi lägga dem här.
 
 Just nu kikar vi på <a href="http://www.openfl.org/">OpenFl</a>.
 
+[För den äventyrliga: Get Started](https://github.com/openfl/openfl/wiki/Get-Started)
+
 (Ifall du kan Haxe, nme eller OpenFl så är du varmt välkommen att delta!
 Om du <em>inte</em> kan Haxe så kan du lära det dig tillsammans med oss.)
