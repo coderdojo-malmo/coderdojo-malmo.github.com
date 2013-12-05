@@ -12,7 +12,8 @@ Vill du ta nästa steg och göra skillnad?
 
 * Gå med på vår epostlista: [coderdojo-malmo](https://groups.google.com/group/coderdojo-malmo)
 * Presentera dig och säg att du vill vara med nästa onsdag
-* Har du frågor, kontakta Michael Tiberg, telefon +46-701-469254
+* Har du frågor, kontakta Michael Tiberg, telefon <a href="tel:+46701469254">+46-701-469254</a>
+* Dyk upp på en onsdag lite innan kl 17:30
 
 Du rockar. Vi ses!
 
