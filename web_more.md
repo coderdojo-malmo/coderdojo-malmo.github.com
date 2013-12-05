@@ -23,6 +23,8 @@ Det finns massor att upptäcka.
 
 [Wayback Machine](/web_wayback.html) visar hur en webbsida såg ut för många år sedan!
 
+[Webbläsartillägg](/web_browser_extensions.html) utökar andras webbsidor genom nya, egna knappar i din webbläsare.
+
 ## Mer att läsa
 
 ### Nybörjarartiklarna på WebPlatform.org
