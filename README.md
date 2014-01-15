@@ -10,15 +10,12 @@ The web site uses [Twitter Bootstrap](http://twitter.github.com/bootstrap/). The
 
 **Run it locally**
 
-    jekyll --server --auto
-
-or perhaps
-
     jekyll serve --watch
 
 if you have newer Jekyll.
 
 **Requirements**
 
-    a version of Ruby
+You need a version of Ruby. `ruby -v` to see whether it's installed.
+
     gem install jekyll
