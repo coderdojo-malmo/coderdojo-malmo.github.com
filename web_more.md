@@ -25,6 +25,46 @@ Det finns massor att upptäcka.
 
 [Webbläsartillägg](/web_browser_extensions.html) utökar andras webbsidor genom nya, egna knappar i din webbläsare.
 
+## Tips om CSS
+
+	/* A-taggar på list-element i en UL-lista */
+	UL LI A {
+		text-decoration: none;
+	}
+
+	/* Lite mellanrum efter varje listpunkt */
+	UL LI {
+		margin-bottom: 25px;
+	}
+
+	/* Runda hörn, med beige bakgrund */
+	UL LI {
+		border-radius: 5px;
+		background-color: beige;
+	}
+
+	/* Ett undantag för att några element i listan behövde mer plats:
+	   lägg in class="mer-plats" på det elementet.
+	*/
+	UL LI.mer-plats {
+		margin-top: 15px;
+	}
+
+	/* Alternativt: en enklare selector för denna regel: enklare är bättre */
+	.mer-plats {
+		margin-top: 15px;
+	}
+
+	/* Man kan proppa in bakgrundsfärg eller bild på vad som helst. BODY-taggen är bra: */
+	BODY {
+		background: url(http://web.coderdojo.se/u/olle/bakgrunden.jpg);
+	}
+
+	/* Ge lite utrymme efter en YouTube-film som embeddats in på sidan */
+	IFRAME {
+		margin-bottom: 10px;
+	}
+
 ## Mer att läsa
 
 ### Nybörjarartiklarna på WebPlatform.org
