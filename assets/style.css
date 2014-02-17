@@ -9,6 +9,11 @@ body {
     padding: 20px;
 }
 
+.mentors img {
+    width: 200px;
+    height: 200px;
+}
+
 .boast {
     background: lightyellow;
 }
