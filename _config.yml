@@ -2,6 +2,7 @@
 safe: true
 pygments: true
 lsi: false
+markdown: kramdown
 
 # other settings
 exclude: ['README.md']
